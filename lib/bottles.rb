@@ -1,6 +1,6 @@
 class Bottles
   def verses(from, to)
-    verse(from) + verse(to)
+    from.downto(to).map { |number| verse(number) }.join 
   end
 
   def verse(number)
