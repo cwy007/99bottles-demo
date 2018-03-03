@@ -1,4 +1,8 @@
 class Bottles
+  def song
+    verses(99, 0)
+  end
+
   def verses(from, to)
     from.downto(to).map { |number| verse(number) }.join
   end
@@ -8,9 +12,6 @@ class Bottles
 
     "#{bottles_text(number)} of beer on the wall, #{bottles_text(number)} of beer.\n" \
     "#{second_leading_text(number)} and pass it around, #{bottles_text(number - 1)} of beer on the wall.\n"
-  end
-
-  def song
   end
 
   def zero_verse
