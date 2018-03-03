@@ -55,4 +55,19 @@ Go to the store and buy some more, 99 bottles of beer on the wall.
       end
     end
   end
+
+  describe "#verses" do
+    context "99 and 98" do
+      it "returns correct verses" do
+        expected = <<-VERSE
+99 bottles of beer on the wall, 99 bottles of beer.
+Take one down and pass it around, 98 bottles of beer on the wall.
+98 bottles of beer on the wall, 98 bottles of beer.
+Take one down and pass it around, 97 bottles of beer on the wall.
+        VERSE
+
+        expect(Bottles.new.verses(99, 98)).to eq(expected)
+      end
+    end
+  end
 end
