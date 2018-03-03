@@ -7,7 +7,7 @@ RSpec.describe "Bottles" do
 Take one down and pass it around, 98 bottles of beer on the wall.
         VERSE
 
-        expect(expected).to eq(Bottles.new.verse(99))
+        expect(Bottles.new.verse(99)).to eq(expected)
       end
     end
   end
