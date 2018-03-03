@@ -37,7 +37,7 @@ Take one down and pass it around, 1 bottle of beer on the wall.
       it "returns correct verse" do
         expected = <<-VERSE
 1 bottle of beer on the wall, 1 bottle of beer.
-Take one down and pass it around, no more bottles of beer on the wall.
+Take it down and pass it around, no more bottles of beer on the wall.
         VERSE
 
         expect(Bottles.new.verse(1)).to eq(expected)
