@@ -1,13 +1,13 @@
 class Bottles
+  def verses(from, to)
+    verse(from) + verse(to)
+  end
+
   def verse(number)
     return zero_verse if number.zero?
 
     "#{bottles_text(number)} of beer on the wall, #{bottles_text(number)} of beer.\n" \
     "#{second_leading_text(number)} and pass it around, #{bottles_text(number - 1)} of beer on the wall.\n"
-  end
-
-  def verses(from, to)
-    #code
   end
 
   def zero_verse
